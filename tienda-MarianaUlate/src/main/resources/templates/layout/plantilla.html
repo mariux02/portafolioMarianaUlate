@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:th="http://www.thymeleaf.org"> <!-- se implementa plantilla de thymeleaf-->
-    <head th:fragment="head"> <!-- th= abreviacion de thymeleaf, frangmento = tipo de dato de thymeleaf-->
+<html xmlns="http://w <!-- se implementa plantilla de thymeleaf-->ww.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head"> <!-- th= abreviacion de thymeleaf, fragment = tipo de dato de thymeleaf-->
         <title>TechShop</title>
         <meta charset="UTF-8"/>
-        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/><!-- tlibreria de css con muchos estilos, famosos templaes, coneccion directa-->
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/><!-- libreria de css con muchos estilos, famosos templates, coneccion directa-->
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script><!-- popper es parte de bootstarp-->
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>        
     </head>
     <body>
-        <header th:fragment="header" class="header">
+        <header th:fragment="header" class="header">    
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
                 <div class="container">
                     <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
