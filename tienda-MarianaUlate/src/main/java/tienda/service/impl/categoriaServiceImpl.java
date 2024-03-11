@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class categoriaServiceImpl implements categoriaService {
     
     //conecta directamente con la BD que se presenta con Dao
+    //autowired: me crea un único objeto mientras se ejecuta en la app
     @Autowired
     private categoriaDao categoriaDao;
     
@@ -27,8 +28,8 @@ public class categoriaServiceImpl implements categoriaService {
     @Transactional(readOnly=true)
     public List<categoria> getCategorias(boolean activos) {
         var lista=categoriaDao.findAll();
-        if (activos) {
-           lista.removeIf(e -> !e.isActivo());
+        if (activos) { //se deben de eliminar los que no están activos
+           lista.removeIf(e -> !e.isActivo()); //limpieza
         }
         //en la lista hay los objetos de la categoria
         return lista;

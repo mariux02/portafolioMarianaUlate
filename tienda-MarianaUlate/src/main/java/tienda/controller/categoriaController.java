@@ -24,9 +24,9 @@ public class categoriaController {
     public String inicio(Model model) { //recibe un modelo de tipo modelo
         var categorias = categoriaService.getCategorias(false); //obtener datos de este objeto 
         //var= tipo de variable
-        //se usa el false para recibir un parametro, pero normalmente se pone false
+        //se usa el false para recibir un parametro, se puede poner true pero normalmente se usa false
         model.addAttribute("categorias", categorias); //con "categorias" es el nombre que yo le estoy dando para usar en las listas
         model.addAttribute("totalCategorias", categorias.size()); //metodo basico de java que trae esa lista, son size le pedimos el tamaño de esa lista
-        return "/categoria/listado";
+        return "/categoria/listado";//para poder entrar ya a la vista
     }
 }

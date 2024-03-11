@@ -11,7 +11,7 @@ public interface categoriaService {
     
     // Se obtiene un listado de categorias en un List
     
-    // estoy dicieno que el service si o si tiene una lista de categorias, que viene de Dao que viene de la BD
+    // estoy diciendo que el service si o si tiene una lista de categorias, que viene de Dao que viene de la BD
     public List<categoria> getCategorias(boolean activos);
  
 }
