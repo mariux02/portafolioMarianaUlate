@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TiendaMarianaUlateCamposApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaMarianaUlateCamposApplication.class, args);
+            SpringApplication.run(TiendaMarianaUlateCamposApplication.class, args);
 	}
 
 }
