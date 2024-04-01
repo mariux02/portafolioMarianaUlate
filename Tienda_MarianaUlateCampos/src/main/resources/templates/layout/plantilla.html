@@ -49,14 +49,14 @@
                             </li>
                         </ul>
 
-                        <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
+                     <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
                             <li class="nav-item">
                                 <a class="nav-link" th:href="@{/login}">
                                     <i class="fas fa-sign-in-alt"></i>
                                 </a>
                             </li>
                         </ul>
-
+                        
                         <ul class="navbar-nav" sec:authorize="isAuthenticated()">
                             <li class="nav-item text-white my-auto">
                                 <img th:src="@{${session.usuarioImagen}}"
@@ -70,11 +70,11 @@
                                     <button class="btn btn-dark">
                                         <i class="fas fa-sign-out-alt"></i>
                                     </button>
-
+                                    
                                 </form>
                             </li>
                         </ul>
-
+                        
                     </div>
                 </div>
             </nav>
@@ -97,5 +97,5 @@
                 </div>
             </div>
         </footer>
-    </body>
+    </body>
 </html>
